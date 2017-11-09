@@ -1,0 +1,16 @@
+<h1>Hotels</h1>
+<ul>
+  {{#each this.hotels}}
+  <li>{{this.title}}</li>
+  {{else}}
+  <li>No hotels added</li>
+  {{/each}}
+</ul>
+<h1>Reviews</h1>
+<ul>
+  {{#each this.reviews}}
+  <li>"{{this.comment}}" - <a href="/hotel/{{this.hotel._id}}/{{this.hotel.title}}">{{this.hotel.title}}</a></li>
+  {{else}}
+  <li>No Reviews added</li>
+  {{/each}}
+</ul>

@@ -1,0 +1,27 @@
+<h1>Hotels</h1>
+{{#if this.category}}
+<select class="category">
+  {{#each category}}
+  <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+</select>
+{{/if}}
+{{#each hotel}}
+<div class="hotel">
+  <h2>{{this.title}} <a href="/hotel/{{this._id}}/{{this.title}}">view</a></h2>
+  <h3>{{this.description}}</h3>
+  <h4>views: {{this.views}}</h4>
+  <img src={{this.image}} alt={{this.title}}>
+</div>
+{{else}}
+<p>No hotels available</p>
+{{/each}}
+<div class="pagination">
+  {{#if hasPrevPage}}
+    <a href="/list?page={{prevPage}}">&#8678; prev</a>
+    &nbsp; &nbsp; &nbsp;
+  {{/if}}
+  {{#if hasNextPage}}
+    <a href="/list?page={{nextPage}}">next &#8680;</a>
+  {{/if}}
+</div>

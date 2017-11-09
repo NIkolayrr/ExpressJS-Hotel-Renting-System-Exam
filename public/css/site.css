@@ -1,0 +1,90 @@
+h1 {
+  color: red
+}
+.container {
+  padding-left: 25%
+}
+.menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+.menu li {
+  display: inline-block;
+  font-size: 1.2em;
+}
+.menu li:after {
+  content: "\00a0";
+}
+
+.hotel {
+  max-width: 550px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hotel h2 {
+  padding: 15px 0 0 0; 
+}
+
+.hotel img {
+  width: 100%;
+  position: relative;
+}
+
+.hotel-details img{
+  max-width: 500px;
+}
+
+.review {
+  background: #eee;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-controls {
+  background: #eee;
+  display: flex;
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.admin-controls form {
+  margin-right: 15px;
+}
+
+.admin-panel {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.admin-panel form {
+  display: inline-block;
+}
+ul > .home {
+  list-style:  none;
+}
+.home p{
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+.pagination {
+  font-size: 1.4em;
+}
+.pagination a {
+  text-decoration: none;
+}
+
+.category {
+  margin: 10px;
+  width: 300px;
+  padding: 5px;
+  font-size: 1.2em;
+}

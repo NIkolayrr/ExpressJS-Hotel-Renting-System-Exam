@@ -1,0 +1,18 @@
+<h1>Edit hotel</h1>
+
+<form action="/hotel/edit/{{this.hotel._id}}/{{this.hotel.title}}" method="POST">
+  <p><label for="title">Title</label></p>
+  <input type="text" name="title" id="title" value="{{this.hotel.title}}" />
+  <br />
+  <p><label for="description">Description</label></p>
+  <input type="text" name="description" id="description" value="{{this.hotel.description}}" />
+  <br />
+  <p><label for="location">Location</label></p>
+  <input type="text" name="location" id="location" value="{{this.hotel.location}}" />
+  <br />
+  <p><label for="image">Image</label></p>
+  <input type="text" name="image" id="image" value="{{this.hotel.image}}" />
+  <br />
+  <br />
+  <input type="submit" value="Edit" />
+</form>

@@ -1,0 +1,8 @@
+<ul>
+{{#each hotel}}
+<li class="home">
+  <p>{{this.title}} - {{this.description}}</p>
+  <a href="/hotel/{{this._id}}/{{this.title}}">view</a>
+</li>
+{{/each}}
+</ul>

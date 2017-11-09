@@ -1,0 +1,23 @@
+<h1>Add a hotel</h1>
+
+<form action="/add" method="POST">
+  <p><label for="title">Title</label></p>
+  <input type="text" name="title" id="title" value="{{title}}" />
+  <br />
+  <p><label for="description">Description</label></p>
+  <input type="text" name="description" id="description" value="{{description}}" />
+  <br />
+  <p><label for="location">Location</label></p>
+  <input type="text" name="location" id="location" value="{{location}}" />
+  <br />
+  <p><label for="image">Image</label></p>
+  <input type="text" name="image" id="image" value="{{image}}" />
+  <br />
+  <select name="category">
+    {{#each category}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <br />
+  <input type="submit" value="Add" />
+</form>

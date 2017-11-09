@@ -1,0 +1,33 @@
+<div class="hotel-details">
+  <h1>{{this.hotel.title}}</h1>
+  <p>Description: {{this.hotel.description}}</p>
+  <img src={{this.hotel.image}} alt={{this.hotel.title}}>
+  <h4>views: {{this.hotel.views}}</h4>
+  <h4>likes: {{this.hotel.likes.length}}</h4>
+  {{#if isAdmin}}
+  <div class="admin-controls">
+    <form action="/hotel/delete/{{this.hotel._id}}/{{this.hotel.title}}" method="POST">
+    <input type="submit" value="delete">
+  </form>
+  <a href="/hotel/edit/{{this.hotel._id}}/{{this.hotel.title}}">Edit</a>
+  </div>
+  {{/if}}
+</div>
+{{#if currentUser}}
+<form action="/hotel/like/{{this.hotel._id}}/{{this.hotel.title}}" method="POST">
+  <input type="submit" value="like">
+</form>
+<h5>Add Review</h5>
+<form action="/hotel/{{this.hotel._id}}/{{this.hotel.title}}" method="POST">
+  <input type="text" name="comment" value="{{comment}}">
+  <input type="submit" value="add">
+</form>
+{{/if}}
+<h2>Reviews</h2>
+{{#each review}}
+<div class="review">
+  <h3>{{this.comment}} - <a href="/profile/{{this.user.username}}">{{this.user.username}}</a></h3>
+</div>
+{{else}}
+<p>No reviews for this hotel</p>
+{{/each}}

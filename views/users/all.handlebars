@@ -1,0 +1,21 @@
+<h1>Admin Panel</h1>
+<ul>
+  {{#each users}}
+  <li class="admin-panel">
+    {{this.username}} 
+    {{#if this.roles}} 
+    - {{this.roles}} 
+    {{else}}
+    <form action="/admins/add/{{this._id}}" method="POST">
+      <input type="submit" value="make admin">
+    </form>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+<h2>Add Category</h2>
+<form action="/category/add" method="POST">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name">
+  <input type="submit" value="add">
+</form>
